@@ -1,0 +1,92 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.calculator-body {
+  box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.1),
+    0 0.1875rem 0.125rem rgba(0, 0, 0, 0.1),
+    inset 0 -0.1875rem 0.125rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: #282c34;
+  border-radius: 10px;
+  height: 70vh;
+}
+.Btn-Section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+button {
+  padding: 0.8rem;
+
+  border-radius: 1rem;
+  border: #282c34;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.1),
+    0 0.1875rem 0.125rem rgba(0, 0, 0, 0.1),
+    inset 0 -0.1875rem 0.125rem rgba(0, 0, 0, 0.2);
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 0.2s;
+}
+button:hover {
+  opacity: 0.6;
+}
+.operation-btn {
+  background-color: #61dafb;
+  color: #000;
+}
+.plus {
+  grid-row-start: 1;
+
+  grid-column-end: 5;
+}
+.minus {
+  grid-row-start: 2;
+
+  grid-column-end: 5;
+}
+.multiple {
+  grid-row-start: 3;
+
+  grid-column-end: 5;
+}
+.divide {
+  grid-row-start: 4;
+
+  grid-column-end: 5;
+}
+.display-screen {
+  padding: 0.9rem 0.9rem;
+  border-radius: 1rem;
+  background-color: white;
+  width: 14vw;
+  overflow: auto;
+}
+.Delete-btn {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.equal-btn {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 5;
+}
+@media screen and (max-width: 27.875rem) {
+  button {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  .display-screen {
+    width: 27vw;
+  }
+}
