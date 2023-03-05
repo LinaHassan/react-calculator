@@ -31,4 +31,5 @@ p {
   cursor: pointer;
   font-size: 1.2rem;
   transition: 0.2s;
+  overflow:hidden;
 }

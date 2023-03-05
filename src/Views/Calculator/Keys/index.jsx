@@ -1,6 +1,7 @@
 import "../Calculator.css";
 
-const Operatorkeys = ({ updateCalc, calculate, deleteLast, clearAll }) => {
+const Keys = ({ updateCalc, calculate, deleteLast, clearAll }) => {
+  
   const createDigits = () => {
     const digits = [];
     for (let i = 1; i < 10; i++) {
@@ -46,4 +47,4 @@ const Operatorkeys = ({ updateCalc, calculate, deleteLast, clearAll }) => {
   );
 };
 
-export default Operatorkeys;
+export default Keys;

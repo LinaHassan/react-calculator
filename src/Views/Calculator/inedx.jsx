@@ -1,9 +1,10 @@
-import { useState, useContext, useEffect } from "react";
 import "./Calculator.css";
+import Keys from "./Keys";
 import DisplayScreen from "./DisplayScreen";
-import { evaluate } from "mathjs";
-import Operatorkeys from "./keys/keys";
 import { historyContext } from "../../context";
+import { evaluate } from "mathjs";
+import { useState, useContext, useEffect } from "react";
+
 
 const Calculator = () => {
   const [calc, setCalac] = useState("");
@@ -11,7 +12,8 @@ const Calculator = () => {
 
   const { setHistory, editValue } = useContext(historyContext);
 
-  const ops = ["+", "-", "/", "*", "."];
+  const ops = ["+", "/", "*", ".","="];
+
   useEffect(() => {
     setCalac(editValue);
   }, [editValue]);
@@ -45,6 +47,7 @@ const Calculator = () => {
 
     setResult("");
   };
+
   const deleteLast = () => {
     if (calc === "") {
       return;
@@ -52,6 +55,7 @@ const Calculator = () => {
     const value = calc.slice(0, -1);
     setCalac(value);
   };
+
   const clearAll = () => {
     if (calc === "") {
       return;
@@ -64,7 +68,7 @@ const Calculator = () => {
       <main>
         <div className="calculator-body">
           <DisplayScreen calc={calc} result={result} />
-          <Operatorkeys
+          <Keys
             updateCalc={updateCalc}
             calculate={calculate}
             deleteLast={deleteLast}

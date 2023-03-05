@@ -70,7 +70,7 @@ button:hover {
   border-radius: 1rem;
   background-color: white;
   width: 14vw;
-  overflow: auto;
+  overflow: hidden;
 }
 .Delete-btn {
   grid-column-start: 1;
